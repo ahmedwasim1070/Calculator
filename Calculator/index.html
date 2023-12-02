@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="img/475496.png">
+    <title>Calculator</title>
+</head>
+<body>
+    <section>
+        <div class="main">
+            <div class="input-display">
+                <input type="text"  id="display" readonly>
+            </div>
+            <div class="cal">
+                <div class="cal-row-1">
+                    <button onclick="appendToDisplay('%')" value="%" class="cal-entity">%</button>
+                    <button onclick="appendToDisplay('/')" style="font-size: 35px;" value="/" class="cal-entity">÷</button>
+                    <button onclick="backspace()" class="back"><ion-icon name="arrow-back-outline"></ion-icon></button>
+                    <button onclick="clearDisplay()" id="orange" value="" class="clear">C</button>
+                    </div>
+                    <div class="cal-row-2">
+                    <button onclick="appendToDisplay('7')" value="7" class="cal-entity">7</button>
+                    <button onclick="appendToDisplay('8')" value="8" class="cal-entity">8</button>
+                    <button onclick="appendToDisplay('9')" value="9" class="cal-entity">9</button>
+                    <button onclick="appendToDisplay('*')" style="font-size: 35px;" id="orange" value="*" class="cal-entity">x</button>
+                    </div>
+                    <div class="cal-row-3">
+                    <button onclick="appendToDisplay('4')" value="4" class="cal-entity">4</button>
+                    <button onclick="appendToDisplay('5')" value="5" class="cal-entity">5</button>
+                    <button onclick="appendToDisplay('6')" value="6" class="cal-entity">6</button>
+                    <button onclick="appendToDisplay('-')" style="font-size: 35px;" id="orange" value="-" class="cal-entity">-</button>
+                    </div>
+                    <div class="cal-row-4">
+                    <button onclick="appendToDisplay('1')" value="1" class="cal-entity">1</button>
+                    <button onclick="appendToDisplay('2')" value="2" class="cal-entity">2</button>
+                    <button onclick="appendToDisplay('3')" value="3" class="cal-entity">3</button>
+                    <button onclick="appendToDisplay('+')" style="font-size: 35px;" id="orange" value="+" class="cal-entity">+</button>
+                    </div>
+                    <div class="cal-row-5">
+                    <button onclick="appendToDisplay('0')" style="width: 9vw;" id="orange" value="0" class="cal-entity">0</button>
+                    <button onclick="appendToDisplay('.')" value="." class="cal-entity">.</button>
+                    <button onclick="calculate()" style="font-size: 35px;" value="=" class="cal-entity">=</button>
+                    </div>
+            </div>
+        </div>
+    </section>
+    <script src="script.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
